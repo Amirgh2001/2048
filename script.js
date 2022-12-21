@@ -18,7 +18,6 @@ let startGame = () => {
         [0,0,0,0],
         [0,0,0,0]
     ];
-    firstTwoTilesGenerator()
 
     for (let i=0; i<rows; i++) {
         for (let j = 0; j < columns; j++) {
@@ -29,7 +28,10 @@ let startGame = () => {
             document.getElementById("board").append(tile);
         }
     }
+    newCellCreator();
+    newCellCreator();
 }
+
 let firstTwoTilesGenerator = () => {
     while (true) {
         let u1 = Math.floor(Math.random() * 4);
