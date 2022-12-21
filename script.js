@@ -1,6 +1,11 @@
 let board, Score=0, rows=4, columns=4;
 items = [2, 2, 2, 2, 2, 2, 2, 4, 2, 2, 2];
 indexes = [0, 1, 2, 3];
+
+if (!localStorage.getItem("topScore")) {
+    localStorage.setItem("topScore", 0);
+}
+
 window.addEventListener("load", () => {
     let lastTopScore = localStorage.getItem("topScore");
     document.getElementById("topScoreValue").innerText = lastTopScore.toString();
